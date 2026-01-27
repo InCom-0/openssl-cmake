@@ -146,6 +146,7 @@ jobs:
           -DOPENSSL_BUILD_VERBOSE=ON
           -DOPENSSL_CONFIGURE_VERBOSE=ON
           -DOPENSSL_TARGET_VERSION=${{ matrix.version }}
+          -DOPENSSL_PATCH=patch/mingw.patch
 
       - name: Build
         run: cmake --build build
